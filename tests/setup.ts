@@ -1,0 +1,11 @@
+process.env.NODE_ENV = process.env.NODE_ENV ?? "test";
+process.env.PORT = process.env.PORT ?? "3000";
+process.env.DATABASE_URL = process.env.DATABASE_URL ?? "postgresql://test:test@localhost:5432/test";
+process.env.REDIS_URL = process.env.REDIS_URL ?? "redis://localhost:6379";
+process.env.BULLMQ_PREFIX = process.env.BULLMQ_PREFIX ?? "forge-engine-test";
+process.env.LOG_LEVEL = process.env.LOG_LEVEL ?? "silent";
+process.env.METRICS_ENABLED = process.env.METRICS_ENABLED ?? "false";
+process.env.DEFAULT_RATE_LIMIT_POINTS = process.env.DEFAULT_RATE_LIMIT_POINTS ?? "120";
+process.env.DEFAULT_RATE_LIMIT_WINDOW_SECONDS = process.env.DEFAULT_RATE_LIMIT_WINDOW_SECONDS ?? "60";
+process.env.SIGNATURE_TOLERANCE_SECONDS = process.env.SIGNATURE_TOLERANCE_SECONDS ?? "300";
+process.env.INTERNAL_WEBHOOK_TIMEOUT_MS = process.env.INTERNAL_WEBHOOK_TIMEOUT_MS ?? "5000";

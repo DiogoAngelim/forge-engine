@@ -1,0 +1,45 @@
+{
+  "name": "Hard Task Reward",
+  "description": "Awards more XP and coins for hard tasks with streak and time multipliers",
+  "eventType": "task_completed",
+  "priority": 10,
+  "conditions": {
+    "all": [
+      {
+        "field": "difficulty",
+        "op": "eq",
+        "value": "hard"
+      },
+      {
+        "field": "value",
+        "op": "gte",
+        "value": 50
+      }
+    ]
+  },
+  "xpAwards": {
+    "Builder XP": 40,
+    "Consistency XP": 20
+  },
+  "currencyAwards": {
+    "coins": 15
+  },
+  "multiplierConfig": {
+    "field": "difficulty",
+    "map": {
+      "easy": 1,
+      "medium": 1.2,
+      "hard": 1.5
+    }
+  },
+  "timeBonusConfig": {
+    "fromHour": 18,
+    "toHour": 23,
+    "multiplier": 1.2
+  },
+  "streakBonusConfig": {
+    "every": 7,
+    "bonusMultiplier": 1.3
+  },
+  "isActive": true
+}
