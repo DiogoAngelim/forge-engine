@@ -53,5 +53,9 @@ export const buildApp = () => {
   app.use(notFoundHandler);
   app.use(errorHandler);
 
+
   return app;
-};
+}
+
+const app = buildApp();
+export default app;
