@@ -13,7 +13,12 @@ import { metricsRegistry } from "./config/metrics";
 type RawBodyRequest = express.Request & { rawBody?: Buffer };
 
 export const buildApp = () => {
+
   const app = express();
+
+  // Enable CORS for local frontend
+  const cors = require('cors');
+  app.use(cors({ origin: true, credentials: true }));
 
   app.use(
     express.json({
